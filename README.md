@@ -133,13 +133,11 @@ graph TB
     TF --> KV
     TF --> MI[👤 Managed Identity]
     
-    subgraph "Backend Container"
-        MCP[📡 MCP Server<br/>Web Fetch]
-    end
-    
     subgraph "Azure Cloud"
         Frontend
-        Backend
+        subgraph Backend
+            MCP[📡 MCP Server<br/>Web Fetch]
+        end
         ACR
         KV
         MI
