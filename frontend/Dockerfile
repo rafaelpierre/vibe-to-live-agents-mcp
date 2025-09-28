@@ -2,6 +2,10 @@
 # Stage 1: Build the application
 FROM node:23-alpine AS builder
 
+# Accept build arguments
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
 # Set working directory
 WORKDIR /app
 
@@ -15,6 +19,7 @@ RUN npm ci --only=production=false
 COPY . .
 
 # Build the application (runs tsc && vite build)
+# Vite will use VITE_API_URL during build
 RUN npm run build
 
 # Stage 2: Serve with nginx

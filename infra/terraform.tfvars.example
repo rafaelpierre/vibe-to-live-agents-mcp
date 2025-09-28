@@ -1,0 +1,19 @@
+# Example Terraform variables file
+# Copy this file to terraform.tfvars and update with your values
+
+# Basic configuration
+resource_group_name = "rg-vibe-to-live-agents-prod"
+location           = "East US"
+project_name       = "vibe-to-live-agents"
+environment        = "prod"
+
+# Secrets (set these as environment variables or use Azure Key Vault)
+# openai_api_key = "your-openai-api-key-here"
+
+# Common tags
+common_tags = {
+  Project     = "vibe-to-live-agents"
+  Environment = "production"
+  ManagedBy   = "terraform"
+  Owner       = "your-name"
+}

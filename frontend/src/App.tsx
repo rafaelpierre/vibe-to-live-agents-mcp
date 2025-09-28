@@ -26,7 +26,8 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/pipeline', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${apiUrl}/pipeline`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
