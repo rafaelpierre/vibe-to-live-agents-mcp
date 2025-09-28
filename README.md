@@ -25,7 +25,7 @@ This repository demonstrates how to transform a simple AI agent prototype into a
 - **🐳 Containerization**: Docker multi-stage builds optimized for production
 - **☁️ Cloud Infrastructure**: Azure Container Apps with managed identities and security
 - **🚀 Infrastructure as Code**: Terraform modules for reproducible deployments
-- **🔒 Enterprise Security**: Azure Key Vault integration and CORS configuration
+- **🔒 Enterprise Security**: Azure Key Vault integration and secure authentication
 
 ## ✨ Features
 
@@ -39,7 +39,7 @@ This repository demonstrates how to transform a simple AI agent prototype into a
 - **FastAPI Performance**: Async Python API with automatic OpenAPI documentation
 - **AI Agent Integration**: OpenAI GPT-4 with custom tools and MCP servers
 - **Weather Intelligence**: Real-time weather data with snowboarding recommendations
-- **Security-First**: CORS configuration and managed identity authentication
+- **Security-First**: Managed identity authentication and secure API design
 
 ### 🏗️ Infrastructure
 - **Azure Container Apps**: Serverless containers with auto-scaling
@@ -160,8 +160,8 @@ vibe-to-live-agents-mcp/
 │
 ├── ⚡ backend/                  # FastAPI + Python
 │   ├── src/                     # Source code
-│   │   ├── api.py              # FastAPI app with CORS
-│   │   └── pipeline.py         # AI agent pipeline
+│   │   ├── api.py              # FastAPI app and endpoints
+│   │   └── pipeline.py         # OpenAI Agents SDK agent pipeline
 │   ├── pyproject.toml          # Python dependencies (UV)
 │   └── Dockerfile              # Production container
 │
@@ -184,7 +184,6 @@ vibe-to-live-agents-mcp/
 
 - **🔐 Zero Hardcoded Secrets**: All sensitive data in Azure Key Vault
 - **🛡️ Managed Identities**: No stored credentials or connection strings
-- **🌐 CORS Protection**: Proper cross-origin request handling
 - **🔒 Private Registry**: Secure container image storage
 - **📝 Access Policies**: Least-privilege access patterns
 - **🚫 Git Security**: Sensitive files properly ignored
