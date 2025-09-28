@@ -122,7 +122,6 @@ graph TB
     User[👤 User] --> Frontend[🎨 React Frontend<br/>Azure Container App]
     Frontend --> Backend[⚡ FastAPI Backend<br/>Azure Container App]
     Backend --> OpenAI[🤖 OpenAI GPT-4]
-    Backend --> MCP[📡 MCP Server<br/>Web Fetch]
     Backend --> KV[🔐 Azure Key Vault<br/>Secrets]
     
     Frontend --> ACR[📦 Azure Container Registry]
@@ -134,6 +133,10 @@ graph TB
     TF --> KV
     TF --> MI[👤 Managed Identity]
     
+    subgraph "Backend Container"
+        MCP[📡 MCP Server<br/>Web Fetch]
+    end
+    
     subgraph "Azure Cloud"
         Frontend
         Backend
@@ -144,7 +147,6 @@ graph TB
     
     subgraph "External"
         OpenAI
-        MCP
     end
 ```
 
