@@ -41,7 +41,7 @@ This project provides an example of using a custom agent to retrieve weather for
 Run the main script:
 
 ```sh
-uv run python main.py
+uv run uvicorn src.api:app --reload --port 8000
 ```
 
 The agent will:
@@ -51,7 +51,7 @@ The agent will:
 
 ## Project Structure
 
-- `main.py` – Main application logic
+- `src` – Main application logic
 - `pyproject.toml` – Project dependencies and metadata
 - `.env.example` – Example environment variable file
 
