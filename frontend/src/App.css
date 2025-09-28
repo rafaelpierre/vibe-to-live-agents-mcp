@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #181A20;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header Section */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 24px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.snowflake-icon {
+  color: #00bcd4;
+}
+
+.app-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Main Content - Perfect Center */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.central-container {
+  width: 700px;
+  max-width: calc(100vw - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Welcome Title */
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+}
+
+/* Input Section */
+.input-section {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 16px 20px;
+  background-color: #2a2d35;
+  border: 1px solid #3a3d45;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #8a8d95;
+}
+
+.search-input:focus {
+  border-color: #00bcd4;
+}
+
+.submit-button {
+  width: 48px;
+  height: 48px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.submit-button:hover {
+  background-color: #00acc1;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit-button.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Suggested Questions */
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 550px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #b0b3ba;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  text-align: left;
+}
+
+.suggestion-item:hover {
+  color: #ffffff;
+}
+
+.suggestion-arrow {
+  color: #00bcd4;
+  flex-shrink: 0;
+}
+
+.search-input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .central-container {
+    max-width: calc(100vw - 40px);
+    padding: 0 20px;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .suggestions {
+    max-width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 1.75rem;
+  }
+
+  .header {
+    padding: 16px 20px;
+  }
+}
