@@ -252,13 +252,6 @@ Contributions are welcome! Please feel free to:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙋‍♂️ Questions?
-
-- 📧 **Email**: [your-email@domain.com](mailto:your-email@domain.com)
-- 🐦 **Twitter**: [@your-handle](https://twitter.com/your-handle)  
-- 💼 **LinkedIn**: [Your Profile](https://linkedin.com/in/your-profile)
-- 🎓 **Course**: [Building AI Agents](https://buildingaiagents.com)
-
 ---
 
 <div align="center">
